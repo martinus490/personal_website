@@ -1,6 +1,6 @@
 import React from "react";
 import {Container, Grid, Image} from "semantic-ui-react";
-import logo from "../../../assets/image/mail.jpg";
+import picture from "../../../assets/image/mail.jpg";
 
 class About extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class About extends React.Component {
         <Grid padded stackable textAlign='center' verticalAlign='middle'>
           <Grid.Row columns={15}>
             <Grid.Column width={5}>
-              <Image src={logo} style={{'font-size':100}} avatar/>
+              <Image src={picture} style={{'font-size':100}} avatar/>
             </Grid.Column>
 
             <Grid.Column width={10} textAlign='left'>

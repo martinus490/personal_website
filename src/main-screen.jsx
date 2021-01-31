@@ -7,11 +7,15 @@ import "./App.css";
 
 import AboutScreen from "./screens/about/react/index";
 import EducationScreen from "./screens/education/react/index";
+import WorkScreen from "./screens/work/react/index";
+import ContactScreen from "./screens/contact/react";
 
 const PageSwitcher = () => (
   <Switch>
     <Route exact path="/" component={AboutScreen} />
     <Route exact path="/education" component={EducationScreen} />
+    <Route exact path="/work" component={WorkScreen} />
+    <Route exact path="/contact" component={ContactScreen} />
   </Switch>
 );
 
@@ -29,6 +33,12 @@ class MainScreen extends React.Component {
         break;
       case 'education':
         this.redirectTo('/education');
+        break;
+      case 'work':
+        this.redirectTo('/work');
+        break;
+      case 'contact':
+        this.redirectTo('/contact');
         break;
     }
   }
@@ -69,22 +79,30 @@ class MainScreen extends React.Component {
               onClick={this.handleItemClick}
               class="main-menu-items"
             />
+            <Menu.Item
+              name='contact'
+              active={activeItem === "contact"}
+              onClick={this.handleItemClick}
+              class="main-menu-items"
+            >Contact Me</Menu.Item>
           </Menu>
         </Container>
 
         <PageSwitcher className='home-content'/>
 
-        <Container className='home-footer'>
-          <Container>
-            <Icon name='github square' size='big'/>
-            <Icon name='linkedin' size='big'/>
-            <Icon name='instagram' size='big'/>
-            <Icon name='facebook' size='big'/>
-          </Container>
-          <Container textAlign='right' className='copyright'>
-            <h4>Copyright 2021 Martinus.</h4>
-          </Container>
-        </Container>
+        <Grid columns={2} className='home-footer'>
+          <Grid.Row>
+            <Grid.Column>
+              <Icon name='mail square' size='big'/>
+              <Icon name='github square' size='big'/>
+              <Icon name='linkedin' size='big'/>
+              <Icon name='instagram' size='big'/>
+            </Grid.Column>
+            <Grid.Column textAlign='right'>
+              <h4>Copyright 2021 Martinus.</h4>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </Container>
     )
   }
