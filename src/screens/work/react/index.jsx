@@ -43,7 +43,7 @@ class Work extends React.Component {
                     <Header as='h5'>
                       PT. BANK CENTRAL ASIA TBK.
                       <Header.Subheader> Jakarta </Header.Subheader>
-                      <Header.Subheader> Apr 2019 - Present </Header.Subheader>
+                      <Header.Subheader> Apr 2019 - Mrc 2021 </Header.Subheader>
                     </Header>
                   </Grid.Column>
                   <Grid.Column width={12} className='check'>
@@ -53,6 +53,26 @@ class Work extends React.Component {
                         Part Of Software Quality Improvement Team. <br/>
                         Job description:
                         {this.renderJobDescription(2)}
+                      </Header.Subheader>
+                    </Header>
+                  </Grid.Column>
+                </Grid.Row>
+
+                <Grid.Row divided>
+                  <Grid.Column width={4}>
+                    <Header as='h5'>
+                      PT. BANK CENTRAL ASIA TBK.
+                      <Header.Subheader> Jakarta </Header.Subheader>
+                      <Header.Subheader> Oct 2018 - Mrc 2019 </Header.Subheader>
+                    </Header>
+                  </Grid.Column>
+                  <Grid.Column width={12} className='check'>
+                    <Header as='h5'>
+                      IT Specialist Intern
+                      <Header.Subheader>
+                        Part Of Software Quality Improvement Team. <br/>
+                        Job description:
+                        {this.renderJobDescription(1)}
                       </Header.Subheader>
                     </Header>
                   </Grid.Column>

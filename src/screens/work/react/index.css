@@ -1,5 +1,6 @@
 .grid-work {
-    background-color: aqua;
+    border: dimgrey 1px solid;
+    border-radius: 20px;
 }
 
 .left {
