@@ -36,9 +36,9 @@ class Work extends React.Component {
               <Icon name='suitcase' size='massive'/>
             </Grid.Column>
 
-            <Grid.Column width={12} textAlign='left' className='left'>
+            <Grid.Column width={12} textAlign='left'>
               <Grid stackable>
-                <Grid.Row divided>
+                <Grid.Row divided className='row'>
                   <Grid.Column width={4}>
                     <Header as='h5'>
                       PT. BANK CENTRAL ASIA TBK.
@@ -58,7 +58,7 @@ class Work extends React.Component {
                   </Grid.Column>
                 </Grid.Row>
 
-                <Grid.Row divided>
+                <Grid.Row divided className='row'>
                   <Grid.Column width={4}>
                     <Header as='h5'>
                       PT. BANK CENTRAL ASIA TBK.
@@ -66,7 +66,7 @@ class Work extends React.Component {
                       <Header.Subheader> Oct 2018 - Mrc 2019 </Header.Subheader>
                     </Header>
                   </Grid.Column>
-                  <Grid.Column width={12} className='check'>
+                  <Grid.Column width={12}>
                     <Header as='h5'>
                       IT Specialist Intern
                       <Header.Subheader>

@@ -9,7 +9,7 @@ class About extends React.Component {
         <Grid padded stackable textAlign='center' verticalAlign='middle'>
           <Grid.Row columns={15}>
             <Grid.Column width={5}>
-              <Image src={picture} style={{'font-size':100}} avatar/>
+              <Image src={picture} style={{'font-size':150}} avatar/>
             </Grid.Column>
 
             <Grid.Column width={10} textAlign='left'>

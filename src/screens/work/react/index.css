@@ -3,18 +3,15 @@
     border-radius: 20px;
 }
 
-.left {
-    /*background-color: red;*/
-}
-
-.check {
-    /*background-color: bisque;*/
-}
-
 .work-container {
     margin-left: 5% !important;
 }
 
 .job-description {
     padding-left: 2% !important;
+}
+
+.row {
+    padding-left: 1% !important;
+    padding-right: 1% !important;
 }

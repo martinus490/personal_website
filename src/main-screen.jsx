@@ -1,7 +1,7 @@
-import React from "react";
+import React, {createRef} from "react";
 import {Route} from "react-router";
 import {Switch} from "react-router-dom";
-import {Container, Grid, Header, Icon, Menu} from "semantic-ui-react";
+import {Container, Grid, Header, Icon, Menu, Sticky} from "semantic-ui-react";
 
 import "./App.css";
 
@@ -20,6 +20,8 @@ const PageSwitcher = () => (
 );
 
 class MainScreen extends React.Component {
+  contextRef = createRef();
+
   state = {
     activeItem: 'about'
   }
@@ -88,21 +90,25 @@ class MainScreen extends React.Component {
           </Menu>
         </Container>
 
-        <PageSwitcher className='home-content'/>
+        <Container className='home-content'>
+          <PageSwitcher />
+        </Container>
 
-        <Grid columns={2} className='home-footer'>
-          <Grid.Row>
-            <Grid.Column>
-              <Icon name='mail square' size='big'/>
-              <Icon name='github square' size='big'/>
-              <Icon name='linkedin' size='big'/>
-              <Icon name='instagram' size='big'/>
-            </Grid.Column>
-            <Grid.Column textAlign='right'>
-              <h4>Copyright 2021 Martinus.</h4>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+        <Sticky context={this.contextRef} pushing>
+          <Grid columns={2} className='home-footer'>
+            <Grid.Row>
+              <Grid.Column>
+                <Icon name='mail square' size='big'/>
+                <Icon name='github square' size='big'/>
+                <Icon name='linkedin' size='big'/>
+                <Icon name='instagram' size='big'/>
+              </Grid.Column>
+              <Grid.Column textAlign='right'>
+                <h4>Copyright 2021 Martinus.</h4>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Sticky>
       </Container>
     )
   }
