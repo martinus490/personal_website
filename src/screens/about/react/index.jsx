@@ -1,12 +1,14 @@
 import React from "react";
 import {Container, Grid, Image} from "semantic-ui-react";
-import picture from "../../../assets/image/mail.jpg";
+import picture from "../../../assets/images/mail.jpg";
+
+import "./index.css";
 
 class About extends React.Component {
   render() {
     return(
-      <Container clasname='about-container'>
-        <Grid padded stackable textAlign='center' verticalAlign='middle'>
+      <Container className='about-container'>
+        <Grid padded stackable textAlign='center' verticalAlign='middle' id="about-body">
           <Grid.Row columns={15}>
             <Grid.Column width={5}>
               <Image src={picture} style={{'font-size':150}} avatar/>

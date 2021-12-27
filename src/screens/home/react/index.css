@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Spartan';
+    src: local('Spartan'), url(../../../assets/fonts/LeagueSpartan-Bold.otf) format('truetype');
+}
+
+.home-container {
+    position: relative;
+    width: 100% !important;
+    min-height: 100vh !important;
+}
+
+#home-title {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    line-height: 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3.5em;
+    font-family: Spartan !important;
+    margin-left: 10%;
+    z-index: 1;
+}

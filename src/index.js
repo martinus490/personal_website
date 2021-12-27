@@ -7,12 +7,14 @@ import MainScreen from "./main-screen";
 import reportWebVitals from "./reportWebVitals";
 
 import "semantic-ui-css/semantic.min.css"
+import Home from "./screens/home/react";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <MainScreen />
+    {/* <BrowserRouter>
       <MainScreen />
-    </BrowserRouter>
+    </BrowserRouter> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

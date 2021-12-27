@@ -1,115 +1,85 @@
-import React, {createRef} from "react";
-import {Route} from "react-router";
-import {Switch} from "react-router-dom";
-import {Container, Grid, Header, Icon, Menu, Sticky} from "semantic-ui-react";
-
-import "./App.css";
+import React, { createRef } from "react";
+import { StickyNav } from "react-js-stickynav";
+import { Menu, Segment } from "semantic-ui-react";
 
 import AboutScreen from "./screens/about/react/index";
 import EducationScreen from "./screens/education/react/index";
-import WorkScreen from "./screens/work/react/index";
-import ContactScreen from "./screens/contact/react";
+import WorkScreen from "./screens/work2/react/index";
+import ContactScreen from "./screens/contact/react/index";
+import HomeScreen from "./screens/home/react/index";
 
-const PageSwitcher = () => (
-  <Switch>
-    <Route exact path="/" component={AboutScreen} />
-    <Route exact path="/education" component={EducationScreen} />
-    <Route exact path="/work" component={WorkScreen} />
-    <Route exact path="/contact" component={ContactScreen} />
-  </Switch>
-);
+import "./App.css";
+import { scroller } from "react-scroll/modules";
+
+const style = () => {
+  return (
+    <style jsx>{`
+      .nav {
+          background-color: white;
+          transition: all 0.1s linear;
+          position: fixed;
+          z-index: 2000;
+          padding: 10px 10px 0 10px;
+          width: 100vw;
+      }
+      .scrollNav {
+          z-index: 2000;
+          background: white;
+          width: 100vw;
+      }
+      .styl {
+          padding-top: 80px;
+      }
+    `}</style>
+  )
+}
 
 class MainScreen extends React.Component {
-  contextRef = createRef();
-
-  state = {
-    activeItem: 'about'
-  }
+  state = { activeItem: 'home' }
 
   handleItemClick = (e, { name }) => {
-    this.setState({ activeItem: name });
-
-    switch (name) {
-      case 'about':
-        this.redirectTo('/');
-        break;
-      case 'education':
-        this.redirectTo('/education');
-        break;
-      case 'work':
-        this.redirectTo('/work');
-        break;
-      case 'contact':
-        this.redirectTo('/contact');
-        break;
-    }
+    this.setState({ activeItem: name })
+    scroller.scrollTo(name, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
   }
 
-  redirectTo = (target) => {
-    window.location = target;
-
-    this.setState({
-      loading: true
-    })
-  }
-
-    render() {
+  render() {
     const { activeItem } = this.state
-
     return (
-      <Container className='home-container'>
-        <Header className="home-header">
-          Martinus
-        </Header>
-        <Container className='main-menu-container'>
-          <Menu pointing secondary compact className="main-menu">
+      <>
+        {style()}
+        <StickyNav>
+          <Menu pointing secondary widths={4}>
             <Menu.Item
-              name='about'
-              active={activeItem === "about"}
+              name='home'
+              active={activeItem === 'home'}
               onClick={this.handleItemClick}
-              class="main-menu-items"
             />
             <Menu.Item
-              name='education'
-              active={activeItem === "education"}
+              name='about-me'
+              active={activeItem === 'about-me'}
               onClick={this.handleItemClick}
-              class="main-menu-items"
             />
             <Menu.Item
               name='work'
-              active={activeItem === "work"}
+              active={activeItem === 'work'}
               onClick={this.handleItemClick}
-              class="main-menu-items"
             />
             <Menu.Item
               name='contact'
-              active={activeItem === "contact"}
+              active={activeItem === 'contact'}
               onClick={this.handleItemClick}
-              class="main-menu-items"
-            >Contact Me</Menu.Item>
+            />
           </Menu>
-        </Container>
-
-        <Container className='home-content'>
-          <PageSwitcher />
-        </Container>
-
-        <Sticky context={this.contextRef} pushing>
-          <Grid columns={2} className='home-footer'>
-            <Grid.Row>
-              <Grid.Column>
-                <Icon name='mail square' size='big'/>
-                <Icon name='github square' size='big'/>
-                <Icon name='linkedin' size='big'/>
-                <Icon name='instagram' size='big'/>
-              </Grid.Column>
-              <Grid.Column textAlign='right'>
-                <h4>Copyright 2021 Martinus.</h4>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Sticky>
-      </Container>
+        </StickyNav>
+        <div className="home"><HomeScreen /></div>
+        <div className="about-me"><AboutScreen /></div>
+        <div className="work"><WorkScreen /></div>
+        <div className="contact"><ContactScreen /></div>
+      </>
     )
   }
 }

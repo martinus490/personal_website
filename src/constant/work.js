@@ -1,4 +1,10 @@
 const WORK_DATA = {
+  TOKOPEDIA : [
+    "Maintain and develop user data center to provide data for all internal Tokopedia team usage.",
+    "Maintain and develop Know Your Customer feature.",
+    "Maintain and develop release platforms feature which are AB Testing and Gradual Rollout feature."
+  ],
+
   BCA_FULL_TIME : [
     "Problem solving and fixing production issue.",
     "Design and develop dashboard to support daily internal process.",

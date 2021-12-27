@@ -1,0 +1,55 @@
+.work-container {
+    position: relative;
+    width: 100% !important;
+    min-height: 100vh;
+}
+
+.working-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F3F3;
+    height: 100vh;
+}
+
+.working-card{
+    position: relative;
+    width: 30%;
+    height: 60%;
+    margin: 10px;
+    border-radius: 5%;
+    box-shadow: 6px 8px #b3b2b2;
+}
+
+.working-card:hover {
+    cursor: pointer;
+} 
+
+.working-card:active {
+    box-shadow: 3px 4px #666;
+    transform: translateY(4px);
+} 
+
+#tokopedia-card {
+    background-color: rgb(17, 134, 26);
+    background: linear-gradient(#a7ec8c, rgb(7, 92, 14));
+}
+
+#bca-card {
+    background-color: rgb(17, 134, 26);
+    background: linear-gradient(#a2affa, rgb(25, 22, 231));
+}
+
+.pic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.work-desc {
+    position: absolute;
+    bottom: 0;
+    padding: 5%;
+}

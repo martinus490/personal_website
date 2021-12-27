@@ -3,8 +3,17 @@
     border-radius: 20px;
 }
 
+.work {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(240, 240, 240);
+    z-index: 1;
+}
+
 .work-container {
-    margin-left: 5% !important;
+    position: relative;
+    transform: translateY(25%);
 }
 
 .job-description {

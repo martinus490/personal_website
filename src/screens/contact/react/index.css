@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Spartan';
+    src: local('Spartan'), url(../../../assets/fonts/LeagueSpartan-Bold.otf) format('truetype');
+}
+
+
+.contact-container {
+    position: relative;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #5C7893;
+}
+
+#contact-body {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: spartan;
+    line-height: 1em;
+}
+
+#lets-connect {
+    color: white;
+    font-size: 5em;
+    line-height: 1.5em;
+}
+
+#soscial-media {
+    font-size: 5em;
+}
+
+#contact-footer {
+    background-color: #535962;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+}

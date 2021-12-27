@@ -1,78 +1,31 @@
 import React from "react";
-import {Container, Form, Input, TextArea, Button} from "semantic-ui-react";
+import { Container, Header, Icon } from "semantic-ui-react";
+
+import "./index.css"
 
 class Contact extends React.Component {
-  state = {
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    nameError: false,
-    emailError: false,
-    subjectError: false,
-    messageError: false
-  }
-
-  updateInputValue = (evt) => {
-    this.setState({
-      [evt.target.name]: evt.target.value
-    });
-    if(this.state.emailError) {
-      if(this.state.email !== '') {
-        this.state.emailError = false;
-      }
-    }
-  }
-
-  handleSubmit = () => {
-    if(this.state.email === '') {
-      this.state.emailError = true;
-    }
+  handleOnClick(url) {
+    const newWindow = window.open('https://' + url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
   }
 
   render() {
-    return(
-      <Container classname='contact-container'>
-        <Form>
-          <Form.Field
-            control={Input}
-            name='name'
-            label='Name'
-            value={this.state.name}
-            onChange={this.updateInputValue}
-            placeholder='Name'
-          />
-          <Form.Field
-            control={Input}
-            name='email'
-            label='Email'
-            value={this.state.email}
-            onChange={this.updateInputValue}
-            placeholder='martinus490@gmail.com'
-            error={
-              this.state.emailError && {
-                content: 'Please enter a valid email address',
-                pointing: 'below',
-              }
-            }
-          />
-          <Form.Field
-            control={Input}
-            name='subject'
-            label='Subject'
-            value={this.state.subject}
-            onChange={this.updateInputValue}
-          />
-          <Form.Field
-            id='form-textarea-control-opinion'
-            control={TextArea}
-            name='message'
-            label='Message'
-            value={this.state.message}
-            onChange={this.updateInputValue}
-          />
-          <Button onClick={this.handleSubmit}>Send</Button>
-        </Form>
+    return (
+      <Container className="contact-container">
+        <Container id="contact-body">
+          <Container id="lets-connect">
+            Let's Connect
+          </Container>
+          <Container id="soscial-media">
+            <Icon name='github square' size='small' link onClick={() => this.handleOnClick("github.com/martinus-490")} />
+            <Icon name='instagram' size='small' link onClick={() => this.handleOnClick("instagram.com/martinus490/")} />
+            <Icon name='linkedin' size='small' link onClick={() => this.handleOnClick("linkedin.com/in/martinus490")} />
+            <Icon name='mail' size='small' link onClick={() => window.open('mailto:martinus490@gmail.com')} />
+          </Container>
+        </Container>
+        <Container id="contact-footer">
+          <h2><Icon fitted name="copyright" /> 2021 Martinus</h2>
+        </Container>
       </Container>
     )
   }
