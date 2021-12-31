@@ -1,7 +1,12 @@
 .work-container {
     position: relative;
     width: 100% !important;
-    min-height: 100vh;
+    height: 100vh !important;
+    background-color: green;
+}
+
+.ui.container.work-container {
+    margin: 0px !important;
 }
 
 .working-group {
@@ -9,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F4F3F3;
+    background-color: rgb(251, 251, 251);
     height: 100vh;
 }
 
@@ -17,28 +22,19 @@
     position: relative;
     width: 30%;
     height: 60%;
-    margin: 10px;
+    margin: 50px;
     border-radius: 5%;
-    box-shadow: 6px 8px #b3b2b2;
+    box-shadow: 0 0 10px 4px rgb(240, 239, 239);
+    background-color: rgb(255, 255, 255)
 }
 
 .working-card:hover {
     cursor: pointer;
+    box-shadow: 0 0 10px 4px rgb(228, 227, 227);
 } 
 
 .working-card:active {
-    box-shadow: 3px 4px #666;
-    transform: translateY(4px);
-} 
-
-#tokopedia-card {
-    background-color: rgb(17, 134, 26);
-    background: linear-gradient(#a7ec8c, rgb(7, 92, 14));
-}
-
-#bca-card {
-    background-color: rgb(17, 134, 26);
-    background: linear-gradient(#a2affa, rgb(25, 22, 231));
+    box-shadow: 0 0 10px 4px rgb(207, 207, 207);
 }
 
 .pic {
@@ -52,4 +48,31 @@
     position: absolute;
     bottom: 0;
     padding: 5%;
+}
+
+@media only screen and (max-width: 925px) {
+    .working-card {
+        margin: 30px;
+    }
+}
+
+@media only screen and (max-width: 841px) {
+    .working-card {
+        margin: 20px;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 618px) {
+    .working-group {
+        display: block;
+        padding-top: 1%;
+    }
+
+    .working-card {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        height: 45%;
+    }
 }

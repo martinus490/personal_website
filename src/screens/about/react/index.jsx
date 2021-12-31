@@ -1,6 +1,6 @@
 import React from "react";
 import {Container, Grid, Image} from "semantic-ui-react";
-import picture from "../../../assets/images/mail.jpg";
+import picture from "../../../assets/images/martin2.jpg";
 
 import "./index.css";
 
@@ -11,17 +11,13 @@ class About extends React.Component {
         <Grid padded stackable textAlign='center' verticalAlign='middle' id="about-body">
           <Grid.Row columns={15}>
             <Grid.Column width={5}>
-              <Image src={picture} style={{'font-size':150}} avatar/>
+              <Image src={picture} fluid avatar id="profile-pic" />
             </Grid.Column>
 
-            <Grid.Column width={10} textAlign='left'>
-              <h2>
-                Lorem ipsum dolor sit amet,
-                consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-                dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.
-              </h2>
+            <Grid.Column width={10} textAlign='left' id="about-desc">
+              I'm graduated as bachelor of computer science at Bina Nusantara University (PPTI BCA 4th Batch), 
+              a passionate software developer who wants to learn new things related to technology. 
+              I'm currently working at Tokopedia as backend engineer and part of User & Account team.
             </Grid.Column>
           </Grid.Row>
         </Grid>

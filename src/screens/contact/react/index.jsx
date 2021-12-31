@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Header, Icon } from "semantic-ui-react";
+import { Container, Icon } from "semantic-ui-react";
 
 import "./index.css"
 
@@ -16,7 +16,7 @@ class Contact extends React.Component {
           <Container id="lets-connect">
             Let's Connect
           </Container>
-          <Container id="soscial-media">
+          <Container id="social-media">
             <Icon name='github square' size='small' link onClick={() => this.handleOnClick("github.com/martinus-490")} />
             <Icon name='instagram' size='small' link onClick={() => this.handleOnClick("instagram.com/martinus490/")} />
             <Icon name='linkedin' size='small' link onClick={() => this.handleOnClick("linkedin.com/in/martinus490")} />
@@ -24,7 +24,7 @@ class Contact extends React.Component {
           </Container>
         </Container>
         <Container id="contact-footer">
-          <h2><Icon fitted name="copyright" /> 2021 Martinus</h2>
+          <Icon fitted name="copyright" /> 2021 Martinus
         </Container>
       </Container>
     )

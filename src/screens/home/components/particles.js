@@ -8,9 +8,17 @@ function Particle() {
                 background: {
                     color: "#ffffff"
                 },
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "repulse"
+                        }
+                    }
+                },
                 particles: {
                     number: {
-                        value: 30
+                        value: 60
                     },
                     shape: {
                         type: circleBounce
@@ -30,13 +38,13 @@ function Particle() {
                     },
                     move: {
                         enable: true,
-                        speed: 1,
+                        speed: 0.5,
                         outModes: {
                             default: "bounce"
                         }
                     },
                     opacity: {
-                        value: 0.5
+                        value: 0.3
                     },
                     size: {
                         random: {

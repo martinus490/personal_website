@@ -1,35 +1,18 @@
-@font-face {
-  font-family: 'Alex';
-  src: local('Alex'), url(./assets/fonts/AlexBrush-Regular.ttf) format('truetype');
+.nav {
+  background-color: white;
+  transition: all 0.1s linear;
+  position: fixed;
+  z-index: 2000;
+  padding: 10px 10px 0 10px;
+  width: 100vw;
 }
 
-.home-header {
-  text-align: center !important;
-  font-family: Alex, serif !important;
-  font-size: 6em !important;
-  padding-top: 3% !important;
-  font-weight: normal !important;
+.scrollNav {
+  z-index: 2000;
+  background: white;
+  width: 100vw;
 }
 
-.main-menu-container {
-  padding-bottom: 3% !important;
-}
-
-.main-menu {
-  margin: auto !important;
-  position: relative;
-  left: 50% !important;
-  transform: translateX(-50%);
-}
-
-.home-content {
-  min-height: 50vh;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.home-footer {
-  margin-top: 5% !important;
-  /*background-color: red;*/
+.styl {
+  padding-top: 80px;
 }

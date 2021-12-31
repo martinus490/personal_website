@@ -1,21 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {Route} from 'react-router';
-import {Switch, BrowserRouter} from 'react-router-dom';
-import "./index.css";
 import MainScreen from "./main-screen";
 import reportWebVitals from "./reportWebVitals";
 
 import "semantic-ui-css/semantic.min.css"
-import Home from "./screens/home/react";
+import "./index.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <MainScreen />
-    {/* <BrowserRouter>
-      <MainScreen />
-    </BrowserRouter> */}
-  </React.StrictMode>,
+  <MainScreen />,
   document.getElementById('root')
 );
 
