@@ -15,7 +15,7 @@ class About extends React.Component {
             </Grid.Column>
 
             <Grid.Column width={10} textAlign='left' id="about-desc">
-            I've graduated with a bachelor of computer science at Bina Nusantara University (PPTI BCA 4th Batch), 
+            I've graduated with a bachelor of computer science from Bina Nusantara University (PPTI BCA 4th Batch), 
             a passionate software developer who wants to learn new things related to technology. 
             I'm currently working at Tokopedia as a backend engineer and part of User & Account team.
             </Grid.Column>
