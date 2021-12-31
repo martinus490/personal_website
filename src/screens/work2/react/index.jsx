@@ -69,6 +69,12 @@ class Work extends React.Component {
                           Job description:
                           {this.renderJobDescription(3)}
                         </Header.Subheader>
+                        <Header as='h5'>
+                          Tech
+                          <Header.Subheader>
+                            Go Language, SQL, Redis, NSQ message broker, GQL, GRPC, Datadog, New Relic, Grafana, Git, Jenkins, Ansible, Google Secret Manager, Google Cloud Storage.
+                          </Header.Subheader>
+                        </Header>
                       </Header>
                     </Grid.Column>
                   </Grid.Row>
@@ -100,46 +106,58 @@ class Work extends React.Component {
             >
               <Modal.Header>BANK CENTRAL ASIA</Modal.Header>
               <Modal.Content scrolling>
-              <Grid padded stackable verticalAlign='middle' className='grid-work' divided>
-                <Grid.Row>
-                  <Grid.Column width={3}>
-                    <Header as='h5'>
-                      PT. BANK CENTRAL ASIA TBK.
-                      <Header.Subheader> Jakarta </Header.Subheader>
-                      <Header.Subheader> Apr 2019 - Mar 2021 </Header.Subheader>
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column width={13} className='check'>
-                    <Header as='h5'>
-                      IT Specialist
-                      <Header.Subheader>
-                        Part Of Software Quality Improvement Team. <br />
-                        Job description:
-                        {this.renderJobDescription(2)}
-                      </Header.Subheader>
-                    </Header>
-                  </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                  <Grid.Column width={3}>
-                    <Header as='h5'>
-                      PT. BANK CENTRAL ASIA TBK.
-                      <Header.Subheader> Jakarta </Header.Subheader>
-                      <Header.Subheader> Oct 2018  - Mar 2019 </Header.Subheader>
-                    </Header>
-                  </Grid.Column>
-                  <Grid.Column width={13} className='check'>
-                    <Header as='h5'>
-                      IT Specialist Intern
-                      <Header.Subheader>
-                        Part Of Software Quality Improvement Team. <br />
-                        Job description:
-                        {this.renderJobDescription(1)}
-                      </Header.Subheader>
-                    </Header>
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
+                <Grid padded stackable verticalAlign='middle' className='grid-work' divided>
+                  <Grid.Row>
+                    <Grid.Column width={3}>
+                      <Header as='h5'>
+                        PT. BANK CENTRAL ASIA TBK.
+                        <Header.Subheader> Jakarta </Header.Subheader>
+                        <Header.Subheader> Apr 2019 - Mar 2021 </Header.Subheader>
+                      </Header>
+                    </Grid.Column>
+                    <Grid.Column width={13} className='check'>
+                      <Header as='h5'>
+                        IT Specialist
+                        <Header.Subheader>
+                          Part Of Software Quality Improvement Team. <br />
+                          Job description:
+                          {this.renderJobDescription(2)}
+                        </Header.Subheader>
+                        <Header as='h5'>
+                          Tech
+                          <Header.Subheader>
+                            Java, SQL, Oracle, Springboot, JSP, Weblogic, Git, Jenkins.
+                          </Header.Subheader>
+                        </Header>
+                      </Header>
+                    </Grid.Column>
+                  </Grid.Row>
+                  <Grid.Row>
+                    <Grid.Column width={3}>
+                      <Header as='h5'>
+                        PT. BANK CENTRAL ASIA TBK.
+                        <Header.Subheader> Jakarta </Header.Subheader>
+                        <Header.Subheader> Oct 2018  - Mar 2019 </Header.Subheader>
+                      </Header>
+                    </Grid.Column>
+                    <Grid.Column width={13} className='check'>
+                      <Header as='h5'>
+                        IT Specialist Intern
+                        <Header.Subheader>
+                          Part Of Software Quality Improvement Team. <br />
+                          Job description:
+                          {this.renderJobDescription(1)}
+                        </Header.Subheader>
+                        <Header as='h5'>
+                          Tech
+                          <Header.Subheader>
+                            Java, SQL, Oracle, JSP.
+                          </Header.Subheader>
+                        </Header>
+                      </Header>
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
               </Modal.Content>
             </Modal>
 
