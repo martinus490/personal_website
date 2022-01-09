@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Spartan';
+    src: local('Spartan'), url(../../../assets/fonts/LeagueSpartan-Bold.otf) format('truetype');
+}
+
+
+.contact-container {
+    position: relative;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #8aa0b4;
+}
+
+.ui.container.contact-container {
+    margin: 0px !important;
+}
+
+#contact-body {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: spartan;
+    line-height: 1em;
+}
+
+#lets-connect {
+    color: white;
+    font-size: 5em;
+    line-height: 1.5em;
+}
+
+#social-media {
+    font-size: 5em;
+    color: rgb(12, 12, 12);
+}
+
+#contact-footer {
+    background-color: #6b737e;
+    color: white;
+    position: absolute;
+    width: 100vw !important;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+.ui.container#contact-footer {
+    margin: 0 !important;
+}
+
+@media only screen and (max-width: 655px) {
+    #lets-connect {
+        font-size: 4em;
+    }
+    #social-media {
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    #lets-connect {
+        font-size: 3em;
+    }
+    #contact-footer {
+        font-size: 1em;
+    }
+    #social-media {
+        font-size: 3em;
+    }
+}
